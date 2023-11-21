@@ -1,0 +1,157 @@
+inherited cadCategoriaF: TcadCategoriaF
+  Left = 385
+  Height = 827
+  Top = 87
+  Caption = 'Cadastro de Categoria'
+  ClientHeight = 827
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poScreenCenter
+  WindowState = wsFullScreen
+  inherited PageControl1: TPageControl
+    Height = 827
+    ActivePage = TabSheet1
+    TabIndex = 0
+    OnChange = PageControl1Change
+    inherited TabSheet1: TTabSheet
+      ClientHeight = 794
+      inherited Panel1: TPanel
+        Color = clScrollBar
+        DockSite = False
+        inherited BitBtnPesquisar: TBitBtn
+          Left = 288
+          Top = 30
+          OnClick = BitBtnPesquisarClick
+        end
+        inherited Label1: TLabel
+          Left = 88
+          Top = 48
+          Width = 20
+          Caption = 'ID:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+      end
+      inherited Panel3: TPanel
+        Top = 705
+        Color = clScrollBar
+        DockSite = False
+        inherited BitBtnNovo: TBitBtn
+          OnClick = BitBtnNovoClick
+        end
+        inherited BitBtnFechar: TBitBtn
+          Left = 1218
+          Top = 32
+          OnClick = BitBtnFecharClick
+        end
+      end
+      object DBGrid2: TDBGrid[2]
+        Left = 0
+        Height = 613
+        Top = 92
+        Width = 1340
+        Align = alClient
+        Color = clWindow
+        Columns = <        
+          item
+            Title.Caption = 'ID'
+            Width = 50
+            FieldName = 'categoriaprodutoid'
+          end        
+          item
+            Title.Caption = 'DESCRIÇÃO'
+            Width = 160
+            FieldName = 'ds_categoria_produto'
+          end>
+        DataSource = DSCategoria
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 2
+        OnDblClick = DBGrid2DblClick
+      end
+    end
+    inherited cadastrar: TTabSheet
+      ClientHeight = 794
+      inherited Panel4: TPanel
+        Color = clScrollBar
+        DockSite = False
+      end
+      inherited Panel5: TPanel
+        Top = 703
+        Color = clScrollBar
+        DockSite = False
+        inherited BitBtnGravar: TBitBtn
+          OnClick = BitBtnGravarClick
+        end
+        inherited BitBtnAlterar: TBitBtn
+          OnClick = BitBtnAlterarClick
+        end
+        inherited BitBtnExcluir: TBitBtn
+          OnClick = BitBtnExcluirClick
+        end
+        inherited BitBtnCancelar: TBitBtn
+          OnClick = BitBtnCancelarClick
+        end
+      end
+      object DBEditId: TDBEdit[2]
+        Left = 96
+        Height = 28
+        Top = 96
+        Width = 80
+        DataField = 'categoriaprodutoid'
+        DataSource = DSCategoria
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object DBEditdescricao: TDBEdit[3]
+        Left = 96
+        Height = 28
+        Top = 136
+        Width = 184
+        DataField = 'ds_categoria_produto'
+        DataSource = DSCategoria
+        MaxLength = 0
+        TabOrder = 3
+      end
+      object Label2: TLabel[4]
+        Left = 72
+        Height = 20
+        Top = 104
+        Width = 20
+        Caption = 'ID:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label3: TLabel[5]
+        Left = 8
+        Height = 20
+        Top = 144
+        Width = 86
+        Caption = 'DESCRIÇÃO:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+  end
+  object DSCategoria: TDataSource[1]
+    DataSet = DMF.ZQueryCategoria
+    Left = 808
+    Top = 40
+  end
+end

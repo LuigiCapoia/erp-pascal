@@ -1,0 +1,95 @@
+object PesqClienteF: TPesqClienteF
+  Left = 559
+  Height = 610
+  Top = 205
+  Width = 987
+  Caption = 'Pesquisar Cliente'
+  ClientHeight = 610
+  ClientWidth = 987
+  DesignTimePPI = 120
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poDesktopCenter
+  LCLVersion = '2.2.6.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 96
+    Top = 0
+    Width = 987
+    Align = alTop
+    ClientHeight = 96
+    ClientWidth = 987
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 48
+      Height = 23
+      Top = 40
+      Width = 53
+      Caption = 'Nome:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -17
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Edit1: TEdit
+      Left = 120
+      Height = 28
+      Top = 35
+      Width = 192
+      TabOrder = 0
+    end
+    object BitBtnpesquisar: TBitBtn
+      Left = 344
+      Height = 33
+      Top = 30
+      Width = 94
+      Caption = 'Pesquisar'
+      OnClick = BitBtnpesquisarClick
+      TabOrder = 1
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 514
+    Top = 96
+    Width = 987
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'ID'
+        FieldName = 'clienteid'
+      end    
+      item
+        Title.Caption = 'Tipo'
+        FieldName = 'tipo_cliente'
+      end    
+      item
+        Title.Caption = 'CPF/CNPJ'
+        Width = 150
+        FieldName = 'cpf_cnpj_cliente'
+      end    
+      item
+        Title.Caption = 'Nome do Cliente'
+        Width = 200
+        FieldName = 'nome_cliente'
+      end>
+    DataSource = DataSource1
+    Font.CharSet = ANSI_CHARSET
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 1
+    OnDblClick = DBGrid1DblClick
+  end
+  object DataSource1: TDataSource
+    DataSet = DMF.ZQueryClientes
+    Left = 736
+    Top = 32
+  end
+end

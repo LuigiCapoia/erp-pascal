@@ -1,0 +1,382 @@
+inherited cadProdutoF: TcadProdutoF
+  Left = 480
+  Height = 811
+  Top = 135
+  Width = 1065
+  Align = alClient
+  Caption = 'Cadastro de Produto'
+  ClientHeight = 811
+  ClientWidth = 1065
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poScreenCenter
+  WindowState = wsFullScreen
+  inherited PageControl1: TPageControl
+    Height = 811
+    Width = 1065
+    ActivePage = TabSheet1
+    TabIndex = 0
+    OnChange = PageControl1Change
+    inherited TabSheet1: TTabSheet
+      ClientHeight = 778
+      ClientWidth = 1057
+      inherited Panel1: TPanel
+        Width = 1057
+        ClientWidth = 1057
+        Color = clScrollBar
+        DockSite = False
+        inherited BitBtnPesquisar: TBitBtn
+          Left = 264
+          Top = 30
+          OnClick = BitBtnPesquisarClick
+        end
+        inherited edtPesquisar: TEdit
+          Left = 80
+        end
+        inherited Label1: TLabel
+          Left = 56
+          Top = 48
+          Width = 20
+          Caption = 'ID:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        inherited Image2: TImage
+          Left = 768
+          Top = 11
+        end
+      end
+      inherited Panel3: TPanel
+        Top = 689
+        Width = 1057
+        ClientWidth = 1057
+        Color = clScrollBar
+        DockSite = False
+        inherited BitBtnNovo: TBitBtn
+          OnClick = BitBtnNovoClick
+        end
+        inherited BitBtnFechar: TBitBtn
+          Left = 928
+          OnClick = BitBtnFecharClick
+        end
+      end
+      object DBGrid1: TDBGrid[2]
+        Left = 0
+        Height = 597
+        Top = 92
+        Width = 1057
+        Align = alClient
+        Color = clWindow
+        Columns = <        
+          item
+            Title.Caption = 'ID'
+            Width = 40
+            FieldName = 'produtoid'
+          end        
+          item
+            Title.Caption = 'CatID'
+            Width = 60
+            FieldName = 'categoriaprodutoid'
+          end        
+          item
+            Title.Caption = 'Descrição'
+            Width = 200
+            FieldName = 'ds_produto'
+          end        
+          item
+            Title.Caption = 'Observação'
+            Width = 200
+            FieldName = 'obs_produto'
+          end        
+          item
+            Title.Caption = 'Valor'
+            Width = 120
+            FieldName = 'vl_venda_produto'
+          end        
+          item
+            Title.Caption = 'Data de Cadastro'
+            Width = 150
+            FieldName = 'dt_cadastro_produto'
+          end        
+          item
+            Title.Caption = 'Status'
+            Width = 120
+            FieldName = 'status_produto'
+          end>
+        DataSource = DataSourceProdutos
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 2
+        OnDblClick = DBGrid1DblClick
+      end
+    end
+    inherited cadastrar: TTabSheet
+      ClientHeight = 778
+      ClientWidth = 1057
+      inherited Panel4: TPanel
+        Width = 1057
+        ClientWidth = 1057
+        Color = clScrollBar
+        DockSite = False
+        inherited Image1: TImage
+          Left = 810
+        end
+      end
+      inherited Panel5: TPanel
+        Top = 687
+        Width = 1057
+        ClientWidth = 1057
+        Color = clScrollBar
+        DockSite = False
+        TabOrder = 8
+        inherited BitBtnGravar: TBitBtn
+          OnClick = BitBtnGravarClick
+        end
+        inherited BitBtnAlterar: TBitBtn
+          OnClick = BitBtnAlterarClick
+        end
+        inherited BitBtnExcluir: TBitBtn
+          OnClick = BitBtnExcluirClick
+        end
+        inherited BitBtnCancelar: TBitBtn
+          Left = 928
+          OnClick = BitBtnCancelarClick
+        end
+      end
+      object DBEditID: TDBEdit[2]
+        Left = 72
+        Height = 28
+        Top = 96
+        Width = 80
+        DataField = 'produtoid'
+        DataSource = DataSourceProdutos
+        Alignment = taRightJustify
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 5
+      end
+      object DBEditCatID: TDBEdit[3]
+        Left = 256
+        Height = 28
+        Top = 96
+        Width = 40
+        DataField = 'categoriaprodutoid'
+        DataSource = DataSourceProdutos
+        Alignment = taRightJustify
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 6
+      end
+      object DBEditDescricao: TDBEdit[4]
+        Left = 72
+        Height = 28
+        Top = 232
+        Width = 472
+        DataField = 'ds_produto'
+        DataSource = DataSourceProdutos
+        MaxLength = 0
+        TabOrder = 4
+      end
+      object DBEditObservacao: TDBEdit[5]
+        Left = 344
+        Height = 28
+        Top = 137
+        Width = 200
+        DataField = 'obs_produto'
+        DataSource = DataSourceProdutos
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object DBEditValor: TDBEdit[6]
+        Left = 72
+        Height = 28
+        Top = 183
+        Width = 176
+        DataField = 'vl_venda_produto'
+        DataSource = DataSourceProdutos
+        Alignment = taRightJustify
+        EditMask = ',#0.00'
+        MaxLength = 6
+        TabOrder = 3
+      end
+      object DBEditData: TDBEdit[7]
+        Left = 344
+        Height = 28
+        Top = 184
+        Width = 200
+        DataField = 'dt_cadastro_produto'
+        DataSource = DataSourceProdutos
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 7
+      end
+      object Label2: TLabel[8]
+        Left = 48
+        Height = 20
+        Top = 96
+        Width = 20
+        Caption = 'ID:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label3: TLabel[9]
+        Left = 205
+        Height = 20
+        Top = 104
+        Width = 43
+        Caption = 'CatID:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label4: TLabel[10]
+        Left = 20
+        Height = 20
+        Top = 145
+        Width = 48
+        Caption = 'Status:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label5: TLabel[11]
+        Left = 256
+        Height = 20
+        Top = 144
+        Width = 86
+        Caption = 'Observação:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label6: TLabel[12]
+        Left = 9
+        Height = 20
+        Top = 184
+        Width = 59
+        Caption = 'ValorR$:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label7: TLabel[13]
+        Left = 0
+        Height = 20
+        Top = 240
+        Width = 71
+        Caption = 'Descrição:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label8: TLabel[14]
+        Left = 273
+        Height = 20
+        Top = 188
+        Width = 63
+        Caption = 'DataCad:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object DBComboBox1: TDBComboBox[15]
+        Left = 72
+        Height = 21
+        Top = 144
+        Width = 136
+        DataField = 'status_produto'
+        DataSource = DataSourceProdutos
+        ItemHeight = 15
+        Items.Strings = (
+          'ATIVO'
+          'INATIVO'
+        )
+        MaxLength = 0
+        Style = csOwnerDrawFixed
+        TabOrder = 1
+      end
+      object Label9: TLabel[16]
+        Left = 336
+        Height = 1
+        Top = 91
+        Width = 1
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -15
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object SpeedButton1: TSpeedButton[17]
+        Left = 304
+        Height = 22
+        Top = 102
+        Width = 23
+        Glyph.Data = {
+          36030000424D3803000000000000360000002800000010000000100000000100
+          18000000000000000000120B0000120B00000000000000000000FF00FFFF00FF
+          FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+          FFFF00FFFF00FFFF00FF767676767676767676767676FF00FFFF00FFFF00FFFF
+          00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF767676C8C8C8
+          A7A7A7767676FF00FF6767676767676767676767676767676767676767676767
+          67676767676767FF00FF767676AEAEAEE1E1E1767676FF00FFFF00FFFF00FFFF
+          00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF767676767676
+          767676767676FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+          FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+          00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF767676767676
+          767676767676FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+          FFFF00FFFF00FFFF00FF767676C8C8C8A7A7A7767676FF00FF67676767676767
+          6767676767676767676767676767676767676767676767FF00FF767676AEAEAE
+          E1E1E1767676FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+          FFFF00FFFF00FFFF00FF767676767676767676767676FF00FFFF00FFFF00FFFF
+          00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+          FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+          FFFF00FFFF00FFFF00FF767676767676767676767676FF00FFFF00FFFF00FFFF
+          00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF767676C8C8C8
+          A7A7A7767676FF00FF6767676767676767676767676767676767676767676767
+          67676767676767FF00FF767676AEAEAEE1E1E1767676FF00FFFF00FFFF00FFFF
+          00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF767676767676
+          767676767676FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+          FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+          00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+        }
+        OnClick = SpeedButton1Click
+      end
+    end
+  end
+  object DataSourceProdutos: TDataSource[1]
+    DataSet = DMF.ZQueryProduto
+    Left = 648
+    Top = 56
+  end
+end

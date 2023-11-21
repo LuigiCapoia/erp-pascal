@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <Title Value="project1"/>
+      <Scaled Value="True"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <XPManifest>
+        <DpiAware Value="True"/>
+      </XPManifest>
+      <Icon Value="0"/>
+    </General>
+    <BuildModes>
+      <Item Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+    </RunParams>
+    <RequiredPackages>
+      <Item>
+        <PackageName Value="lazreport"/>
+      </Item>
+      <Item>
+        <PackageName Value="zcomponent"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+      <Item>
+        <PackageName Value="LCL"/>
+      </Item>
+    </RequiredPackages>
+    <Units>
+      <Unit>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="telamodelo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="telaModeloF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaModelo"/>
+      </Unit>
+      <Unit>
+        <Filename Value="datamodule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DMF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="DataModule"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadcliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadClienteF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadCliente"/>
+      </Unit>
+      <Unit>
+        <Filename Value="menuprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MenuPrincipalF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MenuPrincipal"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadcategoria.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadCategoriaF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadProdutoF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadProduto"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadorcamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadOrcamentoF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadOrcamento"/>
+      </Unit>
+      <Unit>
+        <Filename Value="pesquisacategoria.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PesquisaCategoriaF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="PesquisaCategoria"/>
+      </Unit>
+      <Unit>
+        <Filename Value="pesqcliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PesqClienteF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="pesqCliente"/>
+      </Unit>
+      <Unit>
+        <Filename Value="pesqproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PesqProdutoF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="pesqProduto"/>
+      </Unit>
+      <Unit>
+        <Filename Value="telinha.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="telinhaF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadusuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadUsuarioF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadUsuario"/>
+      </Unit>
+      <Unit>
+        <Filename Value="telalogin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="telaLoginF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaLogin"/>
+      </Unit>
+      <Unit>
+        <Filename Value="telasobre.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="telaSobreF"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaSobre"/>
+      </Unit>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="project1"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf2Set"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions>
+      <Item>
+        <Name Value="EAbort"/>
+      </Item>
+      <Item>
+        <Name Value="ECodetoolError"/>
+      </Item>
+      <Item>
+        <Name Value="EFOpenError"/>
+      </Item>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

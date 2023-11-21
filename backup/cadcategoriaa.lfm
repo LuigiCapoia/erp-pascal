@@ -1,0 +1,27 @@
+inherited cadCategoriaa: TcadCategoriaa
+  Left = 727
+  Top = 254
+  Caption = 'cadastro Categoria'
+  inherited PageControl1: TPageControl
+    inherited TabSheet1: TTabSheet
+      inherited Panel1: TPanel
+        Color = clScrollBar
+        DockSite = False
+      end
+      inherited Panel3: TPanel
+        Color = clScrollBar
+        DockSite = False
+      end
+    end
+    inherited cadastrar: TTabSheet
+      inherited Panel4: TPanel
+        Color = clScrollBar
+        DockSite = False
+      end
+      inherited Panel5: TPanel
+        Color = clScrollBar
+        DockSite = False
+      end
+    end
+  end
+end

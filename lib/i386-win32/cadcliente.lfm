@@ -1,0 +1,279 @@
+inherited cadClienteF: TcadClienteF
+  Left = 389
+  Height = 718
+  Top = 93
+  Width = 1261
+  Caption = 'Cadastro de clientes'
+  ClientHeight = 718
+  ClientWidth = 1261
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poScreenCenter
+  WindowState = wsFullScreen
+  inherited PageControl1: TPageControl
+    Height = 718
+    Width = 1261
+    ActivePage = TabSheet1
+    Font.CharSet = ANSI_CHARSET
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabIndex = 0
+    OnChange = PageControl1Change
+    inherited TabSheet1: TTabSheet
+      ClientHeight = 685
+      ClientWidth = 1253
+      inherited Panel1: TPanel
+        Width = 1253
+        ClientWidth = 1253
+        Color = clScrollBar
+        DockSite = False
+        inherited BitBtnPesquisar: TBitBtn
+          Left = 288
+          Top = 30
+          OnClick = BitBtnPesquisarClick
+          TabOrder = 1
+        end
+        inherited edtPesquisar: TEdit
+          TabOrder = 0
+        end
+        inherited Label1: TLabel
+          Left = 56
+          Top = 48
+          Width = 47
+          Caption = 'Nome:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        inherited Image2: TImage
+          Left = 942
+          Top = 30
+        end
+      end
+      inherited Panel3: TPanel
+        Top = 596
+        Width = 1253
+        ClientWidth = 1253
+        Color = clScrollBar
+        DockSite = False
+        inherited BitBtnNovo: TBitBtn
+          OnClick = BitBtnNovoClick
+        end
+        inherited BitBtnFechar: TBitBtn
+          Left = 1104
+          OnClick = BitBtnFecharClick
+        end
+      end
+      object DBGrid2: TDBGrid[2]
+        Left = 0
+        Height = 504
+        Top = 92
+        Width = 1253
+        Align = alClient
+        Color = clWindow
+        Columns = <        
+          item
+            Title.Caption = 'ID'
+            FieldName = 'clienteid'
+          end        
+          item
+            Title.Caption = 'TIPO'
+            FieldName = 'tipo_cliente'
+          end        
+          item
+            Title.Caption = 'CPF/CNPJ'
+            Width = 150
+            FieldName = 'cpf_cnpj_cliente'
+          end        
+          item
+            Title.Caption = 'NOME DO CLIENTE'
+            Width = 150
+            FieldName = 'nome_cliente'
+          end>
+        DataSource = dsClientes
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 2
+        OnDblClick = DBGrid2DblClick
+      end
+    end
+    inherited cadastrar: TTabSheet
+      ClientHeight = 685
+      ClientWidth = 1253
+      Font.CharSet = ANSI_CHARSET
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      inherited Panel4: TPanel
+        Width = 1253
+        ClientWidth = 1253
+        Color = clScrollBar
+        DockSite = False
+        inherited Image1: TImage
+          Left = 1019
+        end
+      end
+      inherited Panel5: TPanel
+        Top = 594
+        Width = 1253
+        ClientWidth = 1253
+        Color = clScrollBar
+        DockSite = False
+        TabOrder = 2
+        inherited BitBtnGravar: TBitBtn
+          OnClick = BitBtnGravarClick
+        end
+        inherited BitBtnAlterar: TBitBtn
+          OnClick = BitBtnAlterarClick
+        end
+        inherited BitBtnExcluir: TBitBtn
+          OnClick = BitBtnExcluirClick
+        end
+        inherited BitBtnCancelar: TBitBtn
+          Left = 1137
+          OnClick = BitBtnCancelarClick
+        end
+      end
+      object DBEditID: TDBEdit[2]
+        Left = 56
+        Height = 28
+        Top = 104
+        Width = 64
+        DataField = 'clienteid'
+        DataSource = dsClientes
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object DBEditCpf_cnpj: TDBEdit[3]
+        Left = 240
+        Height = 28
+        Top = 144
+        Width = 232
+        DataField = 'cpf_cnpj_cliente'
+        DataSource = dsClientes
+        EditMask = '!999.999.999-99;0; '
+        MaxLength = 14
+        TabOrder = 4
+      end
+      object DBEditNome: TDBEdit[4]
+        Left = 56
+        Height = 28
+        Top = 184
+        Width = 448
+        DataField = 'nome_cliente'
+        DataSource = dsClientes
+        MaxLength = 0
+        TabOrder = 5
+      end
+      object Label3: TLabel[5]
+        Left = 18
+        Height = 20
+        Top = 152
+        Width = 35
+        Caption = 'Tipo:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label4: TLabel[6]
+        Left = 160
+        Height = 20
+        Top = 152
+        Width = 73
+        Caption = 'CPF/CNPJ:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label5: TLabel[7]
+        Left = 8
+        Height = 20
+        Top = 192
+        Width = 47
+        Caption = 'Nome:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label2: TLabel[8]
+        Left = 31
+        Height = 20
+        Top = 112
+        Width = 20
+        Caption = 'ID:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object DBComboBox1: TDBComboBox[9]
+        Left = 56
+        Height = 26
+        Top = 144
+        Width = 72
+        DataField = 'tipo_cliente'
+        DataSource = dsClientes
+        ItemHeight = 20
+        Items.Strings = (
+          'F'
+          'J'
+        )
+        MaxLength = 0
+        Style = csOwnerDrawFixed
+        TabOrder = 3
+      end
+      object rdbCPF: TRadioButton[10]
+        Left = 480
+        Height = 24
+        Top = 146
+        Width = 50
+        Caption = 'CPF'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        OnClick = rdbCPFClick
+        ParentFont = False
+        TabOrder = 6
+      end
+      object rdbCNPJ: TRadioButton[11]
+        Left = 536
+        Height = 24
+        Top = 146
+        Width = 61
+        Caption = 'CNPJ'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        OnClick = rdbCNPJClick
+        ParentFont = False
+        TabOrder = 7
+      end
+    end
+  end
+  object dsClientes: TDataSource[1]
+    DataSet = DMF.ZQueryClientes
+    Left = 736
+    Top = 56
+  end
+end

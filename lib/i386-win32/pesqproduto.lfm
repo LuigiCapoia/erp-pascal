@@ -1,0 +1,141 @@
+object PesqProdutoF: TPesqProdutoF
+  Left = 478
+  Height = 657
+  Top = 172
+  Width = 1277
+  Caption = 'Pesquisar Produto'
+  ClientHeight = 657
+  ClientWidth = 1277
+  DesignTimePPI = 120
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poDesktopCenter
+  LCLVersion = '2.2.6.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 104
+    Top = 0
+    Width = 1277
+    Align = alTop
+    ClientHeight = 104
+    ClientWidth = 1277
+    TabOrder = 0
+    object BitBtn1: TBitBtn
+      Left = 432
+      Height = 38
+      Top = 32
+      Width = 94
+      Caption = 'Pesquisar'
+      Glyph.Data = {
+        36030000424D3803000000000000360000002800000010000000100000000100
+        18000000000000000000120B0000120B00000000000000000000FF00FF636363
+        A9A9A9FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+        FFFF00FFFF00FFFF00FF979797838383777777ADADADFF00FFFF00FFFF00FFFF
+        00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFA4A4A4A8A8A8
+        848484767676ACACACFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+        FFFF00FFFF00FFFF00FFFF00FFA7A7A7A8A8A8818181777777AEAEAEFF00FFFF
+        00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+        A7A7A7A6A6A6828282787878A6A6A6FF00FFFF00FFFF00FFFF00FFFF00FFFF00
+        FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFA8A8A8A5A5A58080806A6A6AFF
+        00FF8E8E8EAEAEAEBEBEBEB7B7B7FF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+        FF00FFFF00FFAAAAAAD1D1D19898989D9D9DD9D9D9EBEBEBEAEAEAEBEBEBD6D6
+        D6B8B8B8FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFC1C1C1BFBFBFE0
+        E0E0EAEAEACCCCCCABABABE0E0E0F6F6F6F0F0F09E9E9EFF00FFFF00FFFF00FF
+        FF00FFFF00FFFF00FFAAAAAAD5D5D5D3D3D3E4E4E4B7B7B77E7E7EE1E1E1FCFC
+        FCFFFFFFCECECEFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFC1C1C1D5D5D5A6
+        A6A6B2B2B29C9C9C7F7F7FB0B0B0BEBEBEE4E4E4E1E1E1AEAEAEFF00FFFF00FF
+        FF00FFFF00FFFF00FFC9C9C9D1D1D19292927F7F7F7F7F7F7F7F7F7E7E7E7E7E
+        7ECCCCCCE8E8E8B0B0B0FF00FFFF00FFFF00FFFF00FFFF00FFC4C4C4D9D9D9B2
+        B2B2B8B8B8A2A2A2808080C2C2C2D3D3D3E8E8E8E4E4E4B0B0B0FF00FFFF00FF
+        FF00FFFF00FFFF00FFB0B0B0DFDFDFDFDFDFCECECEA3A3A37F7F7FD2D2D2E8E8
+        E8ECECECD0D0D0FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFC5C5C5FF
+        FFFFF3F3F3BCBCBC9C9C9CC3C3C3D9D9D9E2E2E2A6A6A6FF00FFFF00FFFF00FF
+        FF00FFFF00FFFF00FFFF00FFFF00FFC6C6C6EAEAEADEDEDED5D5D5D9D9D9D5D5
+        D5B6B6B6FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+        00FFB0B0B0B5B5B5C3C3C3C2C2C2FF00FFFF00FFFF00FFFF00FF
+      }
+      OnClick = BitBtn1Click
+      TabOrder = 0
+    end
+    object Edit1: TEdit
+      Left = 152
+      Height = 28
+      Top = 42
+      Width = 248
+      TabOrder = 1
+    end
+    object Label1: TLabel
+      Left = 16
+      Height = 20
+      Top = 45
+      Width = 130
+      Caption = 'Nome do produto:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 553
+    Top = 104
+    Width = 1277
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        Title.Caption = 'ID'
+        FieldName = 'produtoid'
+      end    
+      item
+        Title.Caption = 'Cat ID'
+        FieldName = 'categoriaprodutoid'
+      end    
+      item
+        Title.Caption = 'Descrição'
+        Width = 200
+        FieldName = 'ds_produto'
+      end    
+      item
+        Title.Caption = 'Observação'
+        Width = 200
+        FieldName = 'obs_produto'
+      end    
+      item
+        Title.Caption = 'Valor'
+        Width = 120
+        FieldName = 'vl_venda_produto'
+      end    
+      item
+        Title.Caption = 'Data'
+        Width = 120
+        FieldName = 'dt_cadastro_produto'
+      end    
+      item
+        Title.Caption = 'Status'
+        Width = 120
+        FieldName = 'status_produto'
+      end>
+    DataSource = DataSourcepesqProdutos
+    Font.CharSet = ANSI_CHARSET
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 1
+    OnDblClick = DBGrid1DblClick
+  end
+  object DataSourcepesqProdutos: TDataSource
+    DataSet = DMF.ZQueryProduto
+    Left = 1093
+    Top = 32
+  end
+end

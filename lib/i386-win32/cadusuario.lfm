@@ -1,0 +1,200 @@
+inherited cadUsuarioF: TcadUsuarioF
+  Left = 367
+  Top = 28
+  Caption = 'Cadastro de Usuario'
+  OnClose = FormClose
+  OnShow = FormShow
+  WindowState = wsFullScreen
+  inherited PageControl1: TPageControl
+    ActivePage = TabSheet1
+    TabIndex = 0
+    OnChange = PageControl1Change
+    inherited TabSheet1: TTabSheet
+      inherited Panel1: TPanel
+        Color = clScrollBar
+        DockSite = False
+        inherited BitBtnPesquisar: TBitBtn
+          OnClick = BitBtnPesquisarClick
+        end
+        inherited Label1: TLabel
+          Left = 80
+          Top = 49
+          Width = 20
+          Caption = 'ID:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+      end
+      inherited Panel3: TPanel
+        Color = clScrollBar
+        DockSite = False
+        inherited BitBtnNovo: TBitBtn
+          OnClick = BitBtnNovoClick
+        end
+        inherited BitBtnFechar: TBitBtn
+          OnClick = BitBtnFecharClick
+        end
+      end
+      object DBGrid1: TDBGrid[2]
+        Left = 0
+        Height = 722
+        Top = 92
+        Width = 1340
+        Align = alClient
+        Color = clWindow
+        Columns = <        
+          item
+            Title.Caption = 'ID'
+            FieldName = 'id'
+          end        
+          item
+            Title.Caption = 'Usuario'
+            Width = 150
+            FieldName = 'usuario'
+          end        
+          item
+            Title.Caption = 'Nome Completo'
+            Width = 200
+            FieldName = 'nome_completo'
+          end        
+          item
+            Title.Caption = 'Senha'
+            Width = 120
+            FieldName = 'senha'
+          end>
+        DataSource = DataSourceUsuario
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 2
+        OnDblClick = DBGrid1DblClick
+      end
+    end
+    inherited cadastrar: TTabSheet
+      inherited Panel4: TPanel
+        Color = clScrollBar
+        DockSite = False
+      end
+      inherited Panel5: TPanel
+        Color = clScrollBar
+        DockSite = False
+        TabOrder = 5
+        inherited BitBtnGravar: TBitBtn
+          OnClick = BitBtnGravarClick
+        end
+        inherited BitBtnAlterar: TBitBtn
+          OnClick = BitBtnAlterarClick
+        end
+        inherited BitBtnExcluir: TBitBtn
+          OnClick = BitBtnExcluirClick
+        end
+        inherited BitBtnCancelar: TBitBtn
+          OnClick = BitBtnCancelarClick
+        end
+      end
+      object DBEditID: TDBEdit[2]
+        Left = 64
+        Height = 28
+        Top = 136
+        Width = 100
+        DataField = 'id'
+        DataSource = DataSourceUsuario
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object DBEditNome: TDBEdit[3]
+        Left = 304
+        Height = 28
+        Top = 136
+        Width = 336
+        DataField = 'nome_completo'
+        DataSource = DataSourceUsuario
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object DBEditUsuario: TDBEdit[4]
+        Left = 64
+        Height = 28
+        Top = 176
+        Width = 244
+        DataField = 'usuario'
+        DataSource = DataSourceUsuario
+        MaxLength = 0
+        TabOrder = 3
+      end
+      object DBEditSenha: TDBEdit[5]
+        Left = 376
+        Height = 28
+        Top = 176
+        Width = 264
+        DataField = 'senha'
+        DataSource = DataSourceUsuario
+        MaxLength = 0
+        TabOrder = 4
+      end
+      object Label2: TLabel[6]
+        Left = 43
+        Height = 20
+        Top = 144
+        Width = 20
+        Caption = 'ID:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label3: TLabel[7]
+        Left = 184
+        Height = 20
+        Top = 144
+        Width = 119
+        Caption = 'Nome Completo:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label4: TLabel[8]
+        Left = 5
+        Height = 20
+        Top = 184
+        Width = 58
+        Caption = 'Usuário:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label5: TLabel[9]
+        Left = 328
+        Height = 20
+        Top = 184
+        Width = 46
+        Caption = 'Senha:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+  end
+  object DataSourceUsuario: TDataSource[1]
+    DataSet = DMF.ZQueryUsuario
+    Left = 743
+    Top = 56
+  end
+end

@@ -1,0 +1,383 @@
+object DMF: TDMF
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 509
+  HorizontalOffset = 1253
+  VerticalOffset = 213
+  Width = 769
+  PPI = 120
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    HostName = 'localhost'
+    Port = 5432
+    Database = 'postgres'
+    User = 'postgres'
+    Password = '1234'
+    Protocol = 'postgresql'
+    Left = 95
+    Top = 65
+  end
+  object ZQueryClientes: TZQuery
+    Connection = ZConnection1
+    AfterInsert = ZQueryClientesAfterInsert
+    SQL.Strings = (
+      'SELECT * FROM CLIENTE ORDER BY CLIENTEID ASC'
+    )
+    Params = <>
+    Left = 240
+    Top = 250
+    object ZQueryClientesclienteid: TLongintField
+      FieldKind = fkData
+      FieldName = 'clienteid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ZQueryClientestipo_cliente: TStringField
+      FieldKind = fkData
+      FieldName = 'tipo_cliente'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 1
+    end
+    object ZQueryClientescpf_cnpj_cliente: TStringField
+      FieldKind = fkData
+      FieldName = 'cpf_cnpj_cliente'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 18
+    end
+    object ZQueryClientesnome_cliente: TStringField
+      FieldKind = fkData
+      FieldName = 'nome_cliente'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 100
+    end
+  end
+  object ZQueryCategoria: TZQuery
+    Connection = ZConnection1
+    AfterInsert = ZQueryCategoriaAfterInsert
+    SQL.Strings = (
+      'SELECT * FROM CATEGORIA_PRODUTO ORDER BY CATEGORIAPRODUTOID  ASC'
+    )
+    Params = <>
+    Left = 240
+    Top = 120
+    object ZQueryCategoriacategoriaprodutoid: TLongintField
+      FieldKind = fkData
+      FieldName = 'categoriaprodutoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ZQueryCategoriads_categoria_produto: TStringField
+      FieldKind = fkData
+      FieldName = 'ds_categoria_produto'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+  end
+  object ZQueryProduto: TZQuery
+    Connection = ZConnection1
+    AfterInsert = ZQueryProdutoAfterInsert
+    SQL.Strings = (
+      'SELECT'
+      '  PRODUTO . * '
+      'FROM PRODUTO '
+      'ORDER BY PRODUTOID ASC'
+    )
+    Params = <>
+    Left = 240
+    Top = 180
+    object ZQueryProdutoprodutoid: TLongintField
+      FieldKind = fkData
+      FieldName = 'produtoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      ReadOnly = False
+      Required = True
+    end
+    object ZQueryProdutocategoriaprodutoid: TLongintField
+      FieldKind = fkData
+      FieldName = 'categoriaprodutoid'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ZQueryProdutods_produto: TStringField
+      FieldKind = fkData
+      FieldName = 'ds_produto'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+    object ZQueryProdutoobs_produto: TStringField
+      FieldKind = fkData
+      FieldName = 'obs_produto'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 300
+    end
+    object ZQueryProdutovl_venda_produto: TFloatField
+      DefaultExpression = '0'
+      FieldKind = fkData
+      FieldName = 'vl_venda_produto'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = ',#0.00'
+      Precision = 983042
+    end
+    object ZQueryProdutodt_cadastro_produto: TDateTimeField
+      FieldKind = fkData
+      FieldName = 'dt_cadastro_produto'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ZQueryProdutostatus_produto: TStringField
+      FieldKind = fkData
+      FieldName = 'status_produto'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 10
+    end
+  end
+  object ZQueryOrcamento: TZQuery
+    Connection = ZConnection1
+    AfterInsert = ZQueryOrcamentoAfterInsert
+    SQL.Strings = (
+      'SELECT * FROM ORCAMENTO ORDER BY ORCAMENTOID ASC'
+    )
+    Params = <>
+    Left = 240
+    Top = 310
+    object ZQueryOrcamentoorcamentoid: TLongintField
+      FieldKind = fkData
+      FieldName = 'orcamentoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ZQueryOrcamentoclienteid: TLongintField
+      FieldKind = fkData
+      FieldName = 'clienteid'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ZQueryOrcamentodt_orcamento: TDateTimeField
+      FieldKind = fkData
+      FieldName = 'dt_orcamento'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      EditMask = '!99/99/0000;1;_'
+    end
+    object ZQueryOrcamentodt_validade_orcamento: TDateTimeField
+      FieldKind = fkData
+      FieldName = 'dt_validade_orcamento'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      EditMask = '!99/99/0000;1;_'
+    end
+    object ZQueryOrcamentovl_total_orcamento: TFloatField
+      DefaultExpression = '0'
+      FieldKind = fkData
+      FieldName = 'vl_total_orcamento'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = ',#0.00'
+      Precision = 983042
+    end
+  end
+  object ZQueryOrcamento_item: TZQuery
+    Connection = ZConnection1
+    AfterInsert = ZQueryOrcamento_itemAfterInsert
+    SQL.Strings = (
+      'SELECT * FROM ORCAMENTO_ITEM'
+    )
+    Params = <>
+    Left = 240
+    Top = 60
+    object ZQueryOrcamento_itemorcamentoid: TLongintField
+      FieldKind = fkData
+      FieldName = 'orcamentoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ZQueryOrcamento_itemorcamentoitemid: TLongintField
+      FieldKind = fkData
+      FieldName = 'orcamentoitemid'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ZQueryOrcamento_itemprodutoid: TLongintField
+      FieldKind = fkData
+      FieldName = 'produtoid'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ZQueryOrcamento_itemprodutodesc: TStringField
+      FieldKind = fkData
+      FieldName = 'produtodesc'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object ZQueryOrcamento_itemqt_produto: TFloatField
+      DefaultExpression = '0'
+      FieldKind = fkData
+      FieldName = 'qt_produto'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Precision = 983042
+    end
+    object ZQueryOrcamento_itemvl_unitario: TFloatField
+      DefaultExpression = '0'
+      FieldKind = fkData
+      FieldName = 'vl_unitario'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = ',#0.00'
+      Precision = 983042
+    end
+    object ZQueryOrcamento_itemvl_total: TFloatField
+      DefaultExpression = '0'
+      FieldKind = fkData
+      FieldName = 'vl_total'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = ',#0.00'
+      Precision = 983042
+    end
+  end
+  object ZQueryGenerica: TZQuery
+    Connection = ZConnection1
+    Params = <>
+    Left = 400
+    Top = 60
+  end
+  object ZQueryUsuario: TZQuery
+    Connection = ZConnection1
+    AfterInsert = ZQueryUsuarioAfterInsert
+    SQL.Strings = (
+      'SELECT * FROM USUARIOS ORDER BY ID ASC'
+    )
+    Params = <>
+    Left = 400
+    Top = 120
+    object ZQueryUsuarioid: TLongintField
+      FieldKind = fkData
+      FieldName = 'id'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ZQueryUsuariousuario: TStringField
+      FieldKind = fkData
+      FieldName = 'usuario'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object ZQueryUsuarionome_completo: TStringField
+      FieldKind = fkData
+      FieldName = 'nome_completo'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object ZQueryUsuariosenha: TStringField
+      FieldKind = fkData
+      FieldName = 'senha'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+  end
+end

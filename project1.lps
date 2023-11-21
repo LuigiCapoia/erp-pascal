@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="65" Y="22"/>
+        <UsageCount Value="89"/>
+      </Unit>
+      <Unit>
+        <Filename Value="telamodelo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="telaModeloF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaModelo"/>
+        <TopLine Value="6"/>
+        <CursorPos X="26" Y="34"/>
+        <UsageCount Value="89"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="datamodule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DMF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="DataModule"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="144"/>
+        <CursorPos X="76" Y="162"/>
+        <UsageCount Value="89"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadcliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadClienteF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadCliente"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="227"/>
+        <CursorPos X="49" Y="220"/>
+        <UsageCount Value="89"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="menuprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MenuPrincipalF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MenuPrincipal"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="87"/>
+        <CursorPos X="25" Y="106"/>
+        <UsageCount Value="86"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadcategoria.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadCategoriaF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="47"/>
+        <CursorPos Y="59"/>
+        <UsageCount Value="85"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadProdutoF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadProduto"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="112"/>
+        <CursorPos X="27" Y="132"/>
+        <UsageCount Value="84"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadorcamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadOrcamentoF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadOrcamento"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="222"/>
+        <CursorPos X="73" Y="259"/>
+        <UsageCount Value="81"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="pesquisacategoria.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PesquisaCategoriaF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="PesquisaCategoria"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="65"/>
+        <CursorPos X="3" Y="76"/>
+        <UsageCount Value="78"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="pesqcliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PesqClienteF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="pesqCliente"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="63"/>
+        <CursorPos X="13" Y="74"/>
+        <UsageCount Value="67"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="pesqproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PesqProdutoF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="pesqProduto"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="51"/>
+        <CursorPos X="48" Y="75"/>
+        <UsageCount Value="65"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="telinha.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="telinhaF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="60"/>
+        <CursorPos X="80" Y="82"/>
+        <UsageCount Value="64"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadusuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="cadUsuarioF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadUsuario"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="150"/>
+        <CursorPos Y="61"/>
+        <UsageCount Value="30"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="telalogin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="telaLoginF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaLogin"/>
+        <EditorIndex Value="6"/>
+        <CursorPos X="19" Y="48"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="telasobre.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="telaSobreF"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaSobre"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="6"/>
+        <CursorPos X="14" Y="14"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadastroclientes.pas"/>
+        <ComponentName Value="CadastroUsuariosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="CadastroClientes"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="14"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadcategoriaa.pas"/>
+        <ComponentName Value="cadCategoriaa"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="3" Y="19"/>
+        <UsageCount Value="19"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadcategorias.pas"/>
+        <ComponentName Value="cadCategorias"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadCategorias"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="37" Y="30"/>
+        <UsageCount Value="19"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\05-09-2023\exercicio1\unit1.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="86"/>
+        <CursorPos Y="94"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\05-09-2023\exercicio1\unit2.lfm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\05-09-2023\exercicio1\unit2.pas"/>
+        <ComponentName Value="DataModule2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="Unit2"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="18"/>
+        <CursorPos Y="43"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\Exercicio-20230828T164621Z-001\Exercicio\menuprincipal.pas"/>
+        <ComponentName Value="MenuPrincipalF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MenuPrincipal"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="61"/>
+        <CursorPos X="2" Y="66"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\Exercicio-20230828T164621Z-001\Exercicio\cadproduto.pas"/>
+        <UnitName Value="CadProduto"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\24-08-2023\Exercicio2\unit1.pas"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\Exercicio-20230828T164621Z-001\Exercicio\oplogin.pas"/>
+        <UnitName Value="OpLogin"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="28"/>
+        <CursorPos X="3" Y="59"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\objpas\sysutils\datih.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="112"/>
+        <CursorPos X="122" Y="139"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\lazarus\fpc\3.2.2\source\packages\fcl-db\src\base\db.pas"/>
+        <UnitName Value="DB"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="396"/>
+        <CursorPos X="14" Y="407"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit1.pas"/>
+        <ComponentName Value="telinhaF"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="19"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\PrjOrcamentoLazarus\PrjOrcamentoLazarus\ucadastrocategoria.pas"/>
+        <ComponentName Value="CadastroCategoriaF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCadastroCategoria"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="40"/>
+        <CursorPos X="2" Y="53"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\orcamento\orcamento\cadorcamento.pas"/>
+        <ComponentName Value="cadOrcamentoF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="cadOrcamento"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="224"/>
+        <CursorPos Y="258"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\orcamento\orcamento\cadorcamento.lfm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadUsuarios.pas"/>
+        <UnitName Value="CadastroClientes"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="D:\lazarus\fpc\3.2.2\source\rtl\win32\windows.pp"/>
+        <UnitName Value="Windows"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="5" Y="5"/>
+        <UsageCount Value="10"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="28">
+      <Position>
+        <Filename Value="telinha.pas"/>
+        <Caret Line="80" Column="6" TopLine="73"/>
+      </Position>
+      <Position>
+        <Filename Value="telalogin.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="telalogin.pas"/>
+        <Caret Line="36" Column="30" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="telalogin.pas"/>
+        <Caret Line="45" Column="26" TopLine="20"/>
+      </Position>
+      <Position>
+        <Filename Value="cadcategoria.pas"/>
+        <Caret Line="173" Column="34" TopLine="144"/>
+      </Position>
+      <Position>
+        <Filename Value="cadcategoria.pas"/>
+        <Caret Line="62" Column="20" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="cadusuario.pas"/>
+        <Caret Line="89" Column="27" TopLine="60"/>
+      </Position>
+      <Position>
+        <Filename Value="cadcliente.pas"/>
+        <Caret Line="258" Column="33" TopLine="244"/>
+      </Position>
+      <Position>
+        <Filename Value="cadproduto.pas"/>
+        <Caret Line="129" Column="43" TopLine="129"/>
+      </Position>
+      <Position>
+        <Filename Value="cadorcamento.pas"/>
+        <Caret Line="193" Column="33" TopLine="179"/>
+      </Position>
+      <Position>
+        <Filename Value="cadorcamento.pas"/>
+        <Caret Line="168" TopLine="75"/>
+      </Position>
+      <Position>
+        <Filename Value="telasobre.pas"/>
+        <Caret Line="11" Column="14"/>
+      </Position>
+      <Position>
+        <Filename Value="telasobre.pas"/>
+        <Caret Line="14" Column="14"/>
+      </Position>
+      <Position>
+        <Filename Value="telalogin.pas"/>
+        <Caret Line="36" Column="50" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="telalogin.pas"/>
+        <Caret Line="37" Column="50" TopLine="22"/>
+      </Position>
+      <Position>
+        <Filename Value="telalogin.pas"/>
+        <Caret Line="38" Column="50" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="telalogin.pas"/>
+        <Caret Line="40" Column="11" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="telalogin.pas"/>
+        <Caret Line="72" Column="11" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="telalogin.pas"/>
+        <Caret Line="46" Column="12" TopLine="35"/>
+      </Position>
+      <Position>
+        <Filename Value="telalogin.pas"/>
+        <Caret Line="22" Column="5" TopLine="9"/>
+      </Position>
+      <Position>
+        <Filename Value="telalogin.pas"/>
+        <Caret Line="56" Column="12" TopLine="49"/>
+      </Position>
+      <Position>
+        <Filename Value="telalogin.pas"/>
+        <Caret Line="62" Column="59" TopLine="41"/>
+      </Position>
+      <Position>
+        <Filename Value="telalogin.pas"/>
+        <Caret Line="63" Column="59" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="telinha.pas"/>
+        <Caret Line="91" Column="52" TopLine="60"/>
+      </Position>
+      <Position>
+        <Filename Value="cadorcamento.pas"/>
+        <Caret Line="319" Column="59" TopLine="305"/>
+      </Position>
+      <Position>
+        <Filename Value="cadorcamento.pas"/>
+        <Caret Line="133" Column="66" TopLine="123"/>
+      </Position>
+      <Position>
+        <Filename Value="cadorcamento.pas"/>
+        <Caret Line="247" TopLine="244"/>
+      </Position>
+      <Position>
+        <Filename Value="telinha.pas"/>
+        <Caret Line="65" Column="25" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="telinha.pas"/>
+        <Caret Line="98" Column="6" TopLine="66"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

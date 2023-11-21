@@ -1,0 +1,30 @@
+inherited CadastroClientesF: TCadastroClientesF
+  Left = 425
+  Top = 183
+  Caption = 'Cadastro de Clientes'
+  WindowState = wsFullScreen
+  inherited PageControl1: TPageControl
+    ActivePage = TabSheet1
+    TabIndex = 0
+    inherited TabSheet1: TTabSheet
+      inherited Panel1: TPanel
+        Color = clScrollBar
+        DockSite = False
+      end
+      inherited Panel3: TPanel
+        Color = clScrollBar
+        DockSite = False
+      end
+    end
+    inherited cadastrar: TTabSheet
+      inherited Panel4: TPanel
+        Color = clScrollBar
+        DockSite = False
+      end
+      inherited Panel5: TPanel
+        Color = clScrollBar
+        DockSite = False
+      end
+    end
+  end
+end

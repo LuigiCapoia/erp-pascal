@@ -1,0 +1,33 @@
+inherited cadCategorias: TcadCategorias
+  Caption = 'Cadastro de categoria'
+  inherited PageControl1: TPageControl
+    inherited TabSheet1: TTabSheet
+      inherited Panel1: TPanel
+        Color = clScrollBar
+        DockSite = False
+      end
+      inherited Panel3: TPanel
+        Color = clScrollBar
+        DockSite = False
+      end
+      object CheckBox1: TCheckBox[2]
+        Left = 133
+        Height = 19
+        Top = 309
+        Width = 79
+        Caption = 'CheckBox1'
+        TabOrder = 2
+      end
+    end
+    inherited cadastrar: TTabSheet
+      inherited Panel4: TPanel
+        Color = clScrollBar
+        DockSite = False
+      end
+      inherited Panel5: TPanel
+        Color = clScrollBar
+        DockSite = False
+      end
+    end
+  end
+end
